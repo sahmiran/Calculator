@@ -24,6 +24,7 @@ namespace Calculator
         long number1 = 0;
         long number2 = 0;
         double number3 = 0;
+        long result = 0;
         string operation = "";
 
         public MainWindow()
@@ -190,24 +191,44 @@ namespace Calculator
         {
             operation = "/";
             ciktiEkrani.Text = "0";
+            if (!(result == 0))
+            {
+                number1 = result;
+                result = 0;
+            }
         }
 
         private void MultplyBtn_Click(object sender, RoutedEventArgs e)
         {
             operation = "*";
             ciktiEkrani.Text = "0";
+            if (!(result == 0))
+            {
+                number1 = result;
+                result = 0;
+            }
         }
 
         private void MinusBtn_Click(object sender, RoutedEventArgs e)
         {
             operation = "-";
             ciktiEkrani.Text = "0";
+            if (!(result == 0))
+            {
+                number1 = result;
+                result = 0;
+            }
         }
 
         private void PlusBtn_Click(object sender, RoutedEventArgs e)
         {
             operation = "+";
             ciktiEkrani.Text = "0";
+            if (!(result == 0))
+            {
+                number1 = result;
+                result = 0;
+            }
         }
 
         private void EquelBtn_Click(object sender, RoutedEventArgs e)
@@ -216,18 +237,34 @@ namespace Calculator
             {
                 case "+":
                     ciktiEkrani.Text = (number1 + number2).ToString();
+                    result = number1+number2;
+                    number2 = 0;
+                    operation = "";
                     break;
 
                 case "-":
                     ciktiEkrani.Text = (number1 - number2).ToString();
+                    result = number1 - number2;
+                    number2 = 0;
+                    operation = "";
                     break;
 
                 case "*":
                     ciktiEkrani.Text = (number1 * number2).ToString();
+                    result = number1 * number2;
+                    number2 = 0;
+                    operation = "";
                     break;
 
                 case "/":
-                    ciktiEkrani.Text = (number1 / number2).ToString();
+                    if (number2 != 0)
+                    {
+                        ciktiEkrani.Text = (number1 / number2).ToString();
+                        result = number1 / number2;
+                        number2 = 0;
+                        operation = "";
+                    }
+                    else ciktiEkrani.Text = "Sifira bölmeye çalıştınız";
                     break;
             }
                 

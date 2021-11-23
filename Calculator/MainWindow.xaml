@@ -56,7 +56,7 @@
         <Button x:Name="btn9" Grid.Column="3" Grid.Row="3" Background="Black" Content="9" Foreground="White" Click="btn9_Click"></Button>
         <Button x:Name="btn6" Grid.Column="3" Grid.Row="4" Background="Black" Content="6" Foreground="White" Click="btn6_Click"></Button>
         <Button x:Name="btn3" Grid.Column="3" Grid.Row="5" Background="Black" Content="3" Foreground="White" Click="btn3_Click"></Button>
-        <Button x:Name="btnComma" Grid.Column="3" Grid.Row="6" Background="Black" Content="," Foreground="White"></Button>
+        <!--<Button x:Name="btnComma" Grid.Column="3" Grid.Row="6" Background="Black" Content="," Foreground="White"></Button>-->
         <Button x:Name="DivideBtn" Grid.Column="4" Grid.Row="2" Background="Black" Content="/" Foreground="GreenYellow" Click="DivideBtn_Click"></Button>
         <Button x:Name="MultplyBtn" Grid.Column="4" Grid.Row="3" Background="Black" Content="x" Foreground="GreenYellow" Click="MultplyBtn_Click"></Button>
         <Button x:Name="MinusBtn" Grid.Column="4" Grid.Row="4" Background="Black" Content="-" Foreground="GreenYellow" Click="MinusBtn_Click"></Button>
